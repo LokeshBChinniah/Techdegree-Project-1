@@ -36,16 +36,28 @@ var quotes = [
   ];
 
 
+
 /***
  * `getRandomQuote` function
 ***/
 
+function getRandomQuote(array) { 
+  var quoteIndex = Math.floor(Math.random() * quotes.length); // Random number generator
+  for (var i = 0; i < array.length; i++) { 
+    var randomQuote = array[quoteIndex]; 
+  } 
+  return randomQuote; // Returns random quote
+}
 
+var result = getRandomQuote(quotes); 
 
 /***
  * `printQuote` function
 ***/
+function printQuote() {
+  var result = getRandomQuote(quotes);//calling the random quote generator
 
+}
 
 
 /***

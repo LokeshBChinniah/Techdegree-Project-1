@@ -56,7 +56,15 @@ var result = getRandomQuote(quotes);
 ***/
 function printQuote() {
   var result = getRandomQuote(quotes);//calling the random quote generator
-
+  var message = "<p class='quote'>" + result.quote + "</p>" + "<p class='source'>" + result.source + "";//initial print to HTML
+  if (result.citation !== undefined) {
+    message += "<span class='citation'>" + result.citation + "";
+  };//for quotes with citation
+  if (result.year !== undefined) {
+    message += "<span class='year'>" + result.year + "";
+  };//for quotes with year cited
+  message += "</p>";//close the last paragraph
+  document.getElementById('quote-box').innerHTML = message; 
 }
 
 
